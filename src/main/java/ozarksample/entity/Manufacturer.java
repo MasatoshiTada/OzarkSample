@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ozarksample.entity;
 
 import java.io.Serializable;
@@ -19,10 +14,6 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author User
- */
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Manufacturer.findAll", query = "SELECT m FROM Manufacturer m"),

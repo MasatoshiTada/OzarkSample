@@ -19,8 +19,11 @@ import javax.ws.rs.core.Response;
 import ozarksample.error.ErrorDataBean;
 import ozarksample.form.FormBean;
 
+/**
+ * バリデーション機能は動きません。
+ */
 @Path("valid")
-@RequestScoped // コレをつけないとModelsがDI出来ず実行時例外
+@RequestScoped
 @Controller
 public class ValidationController {
     
