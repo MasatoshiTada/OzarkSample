@@ -23,8 +23,7 @@ public class ManufacturerController {
     @Path("input")
     @Controller
     public String input() {
-//        return "manufacturer/input.html";
-        return "/input.html";
+        return "manufacturer/input.html";
     }
     
     @GET
@@ -33,7 +32,6 @@ public class ManufacturerController {
     public String findById(@QueryParam("id") Integer id) {
         Manufacturer manufacturer = manufacturerService.findById(id);
         models.put("manufacturer", manufacturer);
-//        return "manufacturer/result.html";
-        return "/result.html";
+        return "manufacturer/result.html";
     }
 }
