@@ -23,8 +23,8 @@ import ozarksample.form.FormBean;
  * バリデーション機能は動きません。
  */
 @Path("valid")
-@RequestScoped
 @Controller
+@RequestScoped
 public class ValidationController {
     
     @Inject
