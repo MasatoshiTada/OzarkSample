@@ -17,5 +17,12 @@ public class ManufacturerService {
         return manufacturer;
     }
     
-    // other methods for CRUD operations
+    @Transactional(value = Transactional.TxType.REQUIRED, rollbackOn = Exception.class)
+    public void insert(Integer id) throws Exception {
+        Manufacturer manufacturer = new Manufacturer(id);
+        manufacturer.setName("JTA Sample");
+        System.out.println(manufacturer.getManufacturerId() + " : " + manufacturer.getName());
+        manager.persist(manufacturer);
+        throw new ClassNotFoundException();
+    }
 }

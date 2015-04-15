@@ -1,0 +1,16 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>input</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <p id="error" th:text="${error}">Error Message</p>
+        <p>input manufacturer id</p>
+        <form action="./insertResult" method="post">
+            <input type="text" name="id"/>
+            <input type="submit" value="post"/>
+        </form>
+    </body>
+</html>
