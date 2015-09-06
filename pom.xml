@@ -4,7 +4,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>OzarkSample</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-m02-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>OzarkSample</name>
@@ -17,43 +17,47 @@
     <dependencies>
         <!-- MVC 1.0の実装。まだEarly Draft版 -->
         <dependency>
-            <groupId>com.oracle.ozark</groupId>
+            <groupId>org.glassfish.ozark</groupId>
             <artifactId>ozark</artifactId>
-            <version>1.0.0-m01</version>
+            <version>1.0.0-m02-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <!-- JPAの実装 -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
-            <version>2.5.2</version>
+            <version>2.6.0</version>
             <scope>provided</scope>
         </dependency>
         <!-- エンティティ自動生成ツール。自動で追記されるので自分で書く必要はなし -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.5.2</version>
+            <version>2.6.0</version>
             <scope>provided</scope>
         </dependency>
         <!-- OzarkでThymeleafを使うための拡張 -->
         <dependency>
-            <groupId>com.oracle.ozark.ext</groupId>
+            <groupId>org.glassfish.ozark.ext</groupId>
             <artifactId>ozark-thymeleaf</artifactId>
-            <version>1.0.0-m01</version>
+            <version>1.0.0-m02-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <!-- Java DBのドライバ -->
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derbyclient</artifactId>
             <version>10.11.1.1</version>
+            <scope>compile</scope>
         </dependency>
-        <!-- Java EE 7 Web ProfileのAPI -->
+        <!-- PrimeFaces -->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>5.0</version>
+            <scope>compile</scope>
         </dependency>
+        <!-- Java EE 7 Web ProfileのAPI -->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>

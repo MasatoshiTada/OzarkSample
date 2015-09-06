@@ -2,7 +2,7 @@ package ozarksample.controller;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.mvc.Controller;
+import javax.mvc.annotation.Controller;
 import javax.mvc.Models;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;

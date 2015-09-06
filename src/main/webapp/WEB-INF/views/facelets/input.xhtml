@@ -8,7 +8,7 @@
     </head>
     <body jsf:id="body">
         名前を入力してください。
-        <form jsf:id="my-form" action="./result" method="post">
+        <form jsf:id="my-form" action="./result" method="post" jsf:prependId="false">
             <input type="text" jsf:id="name" name="name"/>
             <input type="submit" jsf:id="button" value="送信"/>
         </form>

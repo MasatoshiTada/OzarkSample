@@ -1,9 +1,9 @@
 package ozarksample.controller;
 
-import com.oracle.ozark.engine.JspViewEngine;
+import org.glassfish.ozark.engine.JspViewEngine;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.mvc.Controller;
+import javax.mvc.annotation.Controller;
 import javax.mvc.Models;
 import javax.mvc.Viewable;
 import javax.ws.rs.GET;

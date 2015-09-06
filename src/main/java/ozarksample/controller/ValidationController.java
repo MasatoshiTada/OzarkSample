@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.mvc.Controller;
+import javax.mvc.annotation.Controller;
 import javax.mvc.Models;
-import javax.mvc.validation.ValidationResult;
+import javax.mvc.binding.BindingResult;
 import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
 import javax.validation.executable.ExecutableType;
@@ -28,7 +28,7 @@ import ozarksample.form.FormBean;
 public class ValidationController {
     
     @Inject
-    private ValidationResult vr;
+    private BindingResult bindingResult;
     
     @Inject
     private Models models;
@@ -43,9 +43,9 @@ public class ValidationController {
     @Path("result")
     @ValidateOnExecution(type = ExecutableType.NONE)
     public String result(@Valid @BeanParam FormBean formBean) {
-        if (vr.isFailed()) {
+        if (bindingResult.isFailed()) {
             List<ErrorDataBean> errors = new ArrayList<>();
-            for (ConstraintViolation<?> violation : vr) {
+            for (ConstraintViolation<?> violation : bindingResult.getAllViolations()) {
                 ErrorDataBean error = new ErrorDataBean();
                 String message = violation.getMessage();
                 System.out.println(message);
