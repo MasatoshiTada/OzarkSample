@@ -32,4 +32,20 @@ public class FaceletsController {
         return "facelets/result.xhtml";
     }
     
+    @GET
+    @Path("input-get")
+    @Controller
+    public String inputGet() {
+        return "facelets/input-get.xhtml";
+    }
+    
+    @GET
+    @Path("result-get")
+    @Controller
+    public String resultGet(@QueryParam("name") String name) {
+        System.out.println("name = " + name);
+        models.put("name", name);
+        return "facelets/result-get.xhtml";
+    }
+    
 }
