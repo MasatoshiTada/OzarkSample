@@ -19,9 +19,6 @@ import javax.ws.rs.core.Response;
 import ozarksample.error.ErrorDataBean;
 import ozarksample.form.FormBean;
 
-/**
- * バリデーション機能は動きません。
- */
 @Path("valid")
 @Controller
 @RequestScoped
