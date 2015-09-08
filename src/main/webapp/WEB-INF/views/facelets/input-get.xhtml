@@ -2,6 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pf="http://primefaces.org/ui"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:jsf="http://xmlns.jcp.org/jsf">
     <head jsf:id="head">
         <title>名前入力画面</title>
@@ -9,9 +11,8 @@
     <body jsf:id="body">
         名前を入力してください。
         <form jsf:id="my-form" action="./result-get" method="get" jsf:prependId="false">
-            <input type="text" jsf:id="name" name="name"/>
-            <input type="submit" jsf:id="button" value="送信"/>
+            <pf:inputText id="name"/>
+            <input type="submit" value="送信"/>
         </form>
     </body>
 </html>
-

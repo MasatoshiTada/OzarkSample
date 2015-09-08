@@ -27,6 +27,7 @@ public class FaceletsController {
     @Path("result")
     @Controller
     public String result(@FormParam("name") String name) {
+        System.out.println(this.getClass().getSimpleName() + ".result()");
         System.out.println("name = " + name);
         models.put("name", name);
         return "facelets/result.xhtml";
