@@ -4,14 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>入力画面</title>
+        <title>エラー画面</title>
         <link rel="stylesheet" href="${mvc.contextPath}/css/style.css">
     </head>
     <body>
-        <form action="./result" method="post">
-            名前：${sessionScopeDto.name}<br>
-            住所：<input type="text" name="address"><br>
-            <input type="submit" value="送信">
-        </form>
+        <p>${error}</p>
     </body>
 </html>

@@ -7,8 +7,7 @@
         <title>完了画面</title>
     </head>
     <body>
-        名前：${userDto.name}<br>
-        住所：${userDto.address}<br>
-        <a href="./end">終了する</a>
+        名前：${sessionScopeDto.name}<br>
+        住所：${sessionScopeDto.address}<br>
     </body>
 </html>
