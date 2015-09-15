@@ -21,7 +21,7 @@ import ozarksample.form.FormBean;
 import ozarksample.form.MyGroupSequence;
 
 @Path("validation")
-@Controller
+@Controller // クラスにつけると、全メソッドがコントローラーメソッドになる
 @RequestScoped
 public class ValidationController {
     
@@ -56,14 +56,20 @@ public class ValidationController {
         return "validation/inputGroup.jsp";
     }
     
+    /**
+     * メソッド内でバリデーショングループ(Bean Validationの機能)を指定しています。
+     */
     @POST
     @Path("resultGroup")
     public String resultGroup(@BeanParam FormBean formBean) {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
+        // グループを指定してバリデーション実行
         Set<ConstraintViolation<FormBean>> violations = 
                 validator.validate(formBean, MyGroupSequence.class);
         if (violations.isEmpty()) {
+            models.put("name", formBean.getName());
+            models.put("age", formBean.getAge());
             return "validation/resultGroup.jsp";
         } else {
             models.put("violations", violations);

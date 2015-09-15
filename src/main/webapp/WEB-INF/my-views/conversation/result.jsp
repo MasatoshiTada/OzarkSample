@@ -7,6 +7,7 @@
         <title>完了画面</title>
     </head>
     <body>
-        こんにちは、${dto.name}さん！<br>
+        名前：${conversationScopeDto.name}<br>
+        住所：${conversationScopeDto.address}<br>
     </body>
 </html>

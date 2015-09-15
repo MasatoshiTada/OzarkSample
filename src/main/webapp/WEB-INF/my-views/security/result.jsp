@@ -7,6 +7,6 @@
         <title>完了画面</title>
     </head>
     <body>
-        こんにちは、${dto.name}さん！<br>
+        こんにちは、${name}さん！<br>
     </body>
 </html>

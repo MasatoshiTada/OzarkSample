@@ -8,7 +8,7 @@
     <validation-mode>NONE</validation-mode>
     <properties>
       <!-- ログ出力設定など -->
-      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.logging.level" value="WARNING"/>
       <property name="eclipselink.logging.parameters" value="true"/>
       <property name="eclipselink.logging.thread" value="true"/>
       <property name="eclipselink.logging.session" value="false"/>

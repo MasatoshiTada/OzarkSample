@@ -17,12 +17,11 @@ public class ManufacturerService {
         return manufacturer;
     }
     
-    @Transactional(value = Transactional.TxType.REQUIRED, rollbackOn = Exception.class)
+    @Transactional(value = Transactional.TxType.REQUIRED)
     public void insert(Integer id) throws Exception {
         Manufacturer manufacturer = new Manufacturer(id);
         manufacturer.setName("JTA Sample");
         System.out.println(manufacturer.getManufacturerId() + " : " + manufacturer.getName());
         manager.persist(manufacturer);
-        throw new ClassNotFoundException();
     }
 }

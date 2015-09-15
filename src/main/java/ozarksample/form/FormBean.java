@@ -14,7 +14,7 @@ public class FormBean {
     private String name;
 
     @Size(min = 1, max = 3, groups = {Default.class, Group1.class})
-    @Pattern(regexp = "[1-9][0-9]*", groups = {Default.class, Group2.class})
+    @Pattern(regexp = "[0-9]*", groups = {Default.class, Group2.class})
     @Min(value = 0, groups = {Default.class, Group3.class})
     @Max(value = 200, groups = {Default.class, Group3.class})
     @FormParam("age")
