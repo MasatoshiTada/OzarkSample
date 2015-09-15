@@ -4,10 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>完了画面</title>
+        <title>終了画面</title>
     </head>
     <body>
-        名前：${conversationScopeDto.name}<br>
-        住所：${conversationScopeDto.address}<br>
+        <p>終了しました。</p>
+        <a href="./input1">入力画面へ戻る</a>
     </body>
 </html>

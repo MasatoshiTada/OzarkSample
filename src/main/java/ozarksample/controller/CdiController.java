@@ -8,6 +8,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import ozarksample.dto.ConversationScopeDto;
 import ozarksample.dto.SessionScopeDto;
 
 @Path("cdi")
@@ -15,15 +16,16 @@ import ozarksample.dto.SessionScopeDto;
 public class CdiController implements Serializable {
     
     /**
-     * このDTOには@SessionScopedが付加されています
+     * このDTOには@ConversationScopedが付加されています
      */
     @Inject
-    private SessionScopeDto sessionScopeDto;
+    private ConversationScopeDto conversationScopeDto;
     
     @GET
     @Controller
     @Path("input1")
     public String input1() {
+        conversationScopeDto.beginConversation();
         return "cdi/input1.jsp";
     }
     
@@ -31,7 +33,7 @@ public class CdiController implements Serializable {
     @Controller
     @Path("input2")
     public String input2(@FormParam("name") String name) {
-        sessionScopeDto.setName(name);
+        conversationScopeDto.setName(name);
         return "cdi/input2.jsp";
     }
     
@@ -39,8 +41,15 @@ public class CdiController implements Serializable {
     @Controller
     @Path("result")
     public String result(@FormParam("address") String address) {
-        sessionScopeDto.setAddress(address);
+        conversationScopeDto.setAddress(address);
         return "cdi/result.jsp";
     }
     
+    @GET
+    @Controller
+    @Path("end")
+    public String end() {
+        conversationScopeDto.endConversation();
+        return "cdi/end.jsp";
+    }
 }

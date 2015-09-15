@@ -9,7 +9,7 @@
     </head>
     <body>
         <form action="./result" method="post">
-            名前：${sessionScopeDto.name}<br>
+            名前：${conversationScopeDto.name}<br>
             住所：<input type="text" name="address"><br>
             <input type="submit" value="送信">
         </form>
