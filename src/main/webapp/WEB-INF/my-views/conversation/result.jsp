@@ -9,5 +9,6 @@
     <body>
         名前：${conversationScopeDto.name}<br>
         住所：${conversationScopeDto.address}<br>
+        <a href="./end?cid=${conversationScopeDto.id}">終了する</a>
     </body>
 </html>

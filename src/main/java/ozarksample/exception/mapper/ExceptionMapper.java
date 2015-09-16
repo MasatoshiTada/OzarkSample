@@ -16,6 +16,7 @@ public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<Exceptio
     @Override
     public Response toResponse(Exception exception) {
         models.put("error", exception.getMessage());
+        exception.printStackTrace();
         return Response
                 .status(Response.Status.BAD_REQUEST)
                 .entity("exception/error.jsp")

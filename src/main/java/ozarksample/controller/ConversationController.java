@@ -1,6 +1,5 @@
 package ozarksample.controller;
 
-import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
@@ -10,10 +9,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
 import ozarksample.dto.ConversationScopeDto;
-import ozarksample.dto.RequestScopeDto;
-import ozarksample.dto.SessionScopeDto;
 
 @Path("conversation")
 @RequestScoped
@@ -38,27 +34,25 @@ public class ConversationController {
     public String input1() {
         System.out.println("===== input1");
         conversationScopeDto.beginConversation();
-        return "cdi/input1.jsp";
+        return "conversation/input1.jsp";
     }
     
-//    @POST
-    @GET
+    @POST
     @Controller
     @Path("input2")
-    public String input2(/*@FormParam("name")*/ @QueryParam("name") String name) {
+    public String input2(@FormParam("name") String name) {
         System.out.println("===== input2");
         conversationScopeDto.setName(name);
-        return "cdi/input2.jsp";
+        return "conversation/input2.jsp";
     }
     
-//    @POST
-    @GET
+    @POST
     @Controller
     @Path("result")
-    public String result(/*@FormParam("address")*/@QueryParam("address") String address) {
+    public String result(@FormParam("address") String address) {
         System.out.println("===== result");
         conversationScopeDto.setAddress(address);
-        return "cdi/result.jsp";
+        return "conversation/result.jsp";
     }
     
     @GET
@@ -67,6 +61,6 @@ public class ConversationController {
     public String end() {
         System.out.println("===== end");
         conversationScopeDto.endConversation();
-        return "cdi/end.jsp";
+        return "conversation/end.jsp";
     }
 }

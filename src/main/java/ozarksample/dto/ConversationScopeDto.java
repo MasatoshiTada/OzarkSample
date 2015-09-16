@@ -18,6 +18,10 @@ public class ConversationScopeDto implements Serializable {
     @Inject
     private Conversation conversation;
     
+    public String getId() {
+        return conversation.getId();
+    }
+    
     @PostConstruct
     public void init() {
         System.out.println("===== " + this.getClass().getSimpleName() + ".init()"
@@ -58,8 +62,6 @@ public class ConversationScopeDto implements Serializable {
      * @param name the name to set
      */
     public void setName(String name) {
-        System.out.println("===== " + this.getClass().getSimpleName() + ".setName()"
-                + " conversation id = " + conversation.getId());
         this.name = name;
     }
 
@@ -74,8 +76,6 @@ public class ConversationScopeDto implements Serializable {
      * @param address the address to set
      */
     public void setAddress(String address) {
-        System.out.println("===== " + this.getClass().getSimpleName() + "setAddress()"
-                + " conversation id = " + conversation.getId());
         this.address = address;
     }
 }
