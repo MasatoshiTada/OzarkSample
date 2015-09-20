@@ -9,6 +9,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import ozarksample.dto.ConversationScopeDto;
 
 @Path("conversation")
@@ -37,19 +38,19 @@ public class ConversationController {
         return "conversation/input1.jsp";
     }
     
-    @POST
+    @GET
     @Controller
     @Path("input2")
-    public String input2(@FormParam("name") String name) {
+    public String input2(@QueryParam("name") String name) {
         System.out.println("===== input2");
         conversationScopeDto.setName(name);
         return "conversation/input2.jsp";
     }
     
-    @POST
+    @GET
     @Controller
     @Path("result")
-    public String result(@FormParam("address") String address) {
+    public String result(@QueryParam("address") String address) {
         System.out.println("===== result");
         conversationScopeDto.setAddress(address);
         return "conversation/result.jsp";

@@ -8,8 +8,9 @@
         <link rel="stylesheet" href="${mvc.contextPath}/css/style.css">
     </head>
     <body>
-        <form action="./input2?cid=${conversationScopeDto.id}" method="post">
+        <form action="./input2" method="get">
             名前：<input type="text" name="name"><br>
+            <input type="hidden" name="cid" value="${conversationScopeDto.id}"/>
             <input type="submit" value="送信">
         </form>
     </body>
