@@ -18,7 +18,7 @@ public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<Exceptio
         models.put("error", exception.getMessage());
         exception.printStackTrace();
         return Response
-                .status(Response.Status.BAD_REQUEST)
+                .status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity("exception/error.jsp")
                 .build();
     }

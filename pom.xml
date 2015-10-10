@@ -4,7 +4,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>OzarkSample</artifactId>
-    <version>1.0.0-m02-SNAPSHOT</version>
+    <version>1.0.0-m02</version>
     <packaging>war</packaging>
 
     <name>OzarkSample</name>
@@ -19,8 +19,7 @@
         <dependency>
             <groupId>org.glassfish.ozark</groupId>
             <artifactId>ozark</artifactId>
-            <version>1.0.0-m02-SNAPSHOT</version>
-            <scope>compile</scope>
+            <version>1.0.0-m02</version>
         </dependency>
         <!-- JPAの実装 -->
         <dependency>
@@ -40,7 +39,7 @@
         <dependency>
             <groupId>org.glassfish.ozark.ext</groupId>
             <artifactId>ozark-thymeleaf</artifactId>
-            <version>1.0.0-m02-SNAPSHOT</version>
+            <version>1.0.0-m02</version>
             <scope>compile</scope>
         </dependency>
         <!-- Java DBのドライバ -->
