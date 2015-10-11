@@ -33,8 +33,7 @@ public class SecurityController {
     @Controller
     @Path("result")
     public String result(@FormParam("name") String name) {
-        String encodedName = encoders.html(name);
-        models.put("name", encodedName);
+        models.put("name", name);
         return "security/result.jsp";
     }
     

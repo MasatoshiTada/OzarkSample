@@ -7,6 +7,6 @@
         <title>完了画面</title>
     </head>
     <body>
-        こんにちは、${name}さん！<br>
+        こんにちは、${mvc.encoders.html(name)}さん！<br>
     </body>
 </html>
